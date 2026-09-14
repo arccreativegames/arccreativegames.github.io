@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <meta name="description" content="DARC Creative Games (Private) Limited is a mobile game development company creating engaging interactive entertainment experiences.">
+
     <title>DARC Creative Games</title>
 
     <style>
@@ -13,145 +15,266 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            background: #0f1117;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0d0f14;
             color: #ffffff;
             line-height: 1.6;
         }
 
-        header {
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(13, 15, 20, 0.92);
+            border-bottom: 1px solid #242833;
+            backdrop-filter: blur(12px);
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1150px;
+            margin: auto;
+            padding: 18px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand {
+            font-size: 25px;
+            font-weight: 800;
+            letter-spacing: 4px;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+        }
+
+        .nav-links a {
+            color: #b7bcc7;
+            text-decoration: none;
+            font-size: 15px;
+            transition: 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: #ffffff;
+        }
+
+        .hero {
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding: 40px 20px;
+            padding: 120px 24px 80px;
             background:
-                linear-gradient(
-                    rgba(15, 17, 23, 0.85),
-                    rgba(15, 17, 23, 0.95)
-                );
+                radial-gradient(circle at top, #1c2130 0%, #11141b 35%, #0d0f14 70%);
         }
 
-        .hero {
-            max-width: 850px;
+        .hero-content {
+            max-width: 900px;
+        }
+
+        .darc-mark {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 120px;
+            height: 120px;
+            border: 2px solid #ffffff;
+            border-radius: 28px;
+            font-weight: 900;
+            font-size: 31px;
+            letter-spacing: 5px;
+            margin-bottom: 35px;
         }
 
         .hero h1 {
             font-size: 64px;
-            margin-bottom: 20px;
+            line-height: 1.1;
+            margin-bottom: 24px;
+        }
+
+        .hero h1 span {
+            color: #aeb5c5;
         }
 
         .hero p {
-            font-size: 22px;
-            color: #b7bcc8;
-            margin-bottom: 35px;
+            max-width: 700px;
+            margin: 0 auto 36px;
+            color: #aeb5c5;
+            font-size: 20px;
         }
 
-        .buttons {
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .button {
+        .hero-button {
             display: inline-block;
             padding: 14px 28px;
-            border-radius: 8px;
+            background: #ffffff;
+            color: #111318;
             text-decoration: none;
             font-weight: bold;
-            background: #ffffff;
-            color: #111111;
+            border-radius: 9px;
+            transition: transform 0.2s, opacity 0.2s;
         }
 
-        .button.secondary {
-            background: transparent;
-            color: white;
-            border: 1px solid #555b66;
+        .hero-button:hover {
+            transform: translateY(-2px);
+            opacity: 0.9;
         }
 
         section {
-            max-width: 1100px;
+            padding: 100px 24px;
+        }
+
+        .section-container {
+            max-width: 1050px;
             margin: auto;
-            padding: 90px 20px;
         }
 
-        h2 {
-            font-size: 36px;
-            margin-bottom: 25px;
+        .section-label {
             text-align: center;
-        }
-
-        .about p {
-            max-width: 750px;
-            margin: auto;
-            text-align: center;
-            color: #b7bcc8;
-            font-size: 18px;
-        }
-
-        .games {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
-            margin-top: 45px;
-        }
-
-        .game-card {
-            background: #181b22;
-            border: 1px solid #272b35;
-            border-radius: 14px;
-            padding: 30px;
-        }
-
-        .game-card h3 {
-            font-size: 22px;
+            color: #747b8c;
+            text-transform: uppercase;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 3px;
             margin-bottom: 12px;
         }
 
-        .game-card p {
-            color: #aeb4c0;
+        h2 {
+            text-align: center;
+            font-size: 40px;
+            margin-bottom: 28px;
+        }
+
+        .about-text {
+            max-width: 780px;
+            margin: auto;
+            text-align: center;
+            font-size: 18px;
+            color: #aeb5c5;
+        }
+
+        .services {
+            background: #11141b;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 48px;
+        }
+
+        .service-card {
+            background: #161a23;
+            border: 1px solid #262b37;
+            border-radius: 16px;
+            padding: 34px;
+        }
+
+        .service-number {
+            color: #6d7484;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 2px;
             margin-bottom: 20px;
         }
 
-        .game-card a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
+        .service-card h3 {
+            font-size: 22px;
+            margin-bottom: 14px;
+        }
+
+        .service-card p {
+            color: #969dad;
+        }
+
+        .company-info {
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .company-info p {
+            color: #aeb5c5;
+            font-size: 18px;
+            margin-bottom: 18px;
         }
 
         .contact {
+            background: #11141b;
             text-align: center;
         }
 
         .contact p {
-            color: #b7bcc8;
-            margin-bottom: 20px;
+            color: #aeb5c5;
+            margin-bottom: 30px;
+            font-size: 18px;
+        }
+
+        .email {
+            display: inline-block;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            border: 1px solid #343a48;
+            border-radius: 10px;
+            padding: 14px 22px;
+        }
+
+        .email:hover {
+            background: #ffffff;
+            color: #111318;
         }
 
         footer {
-            border-top: 1px solid #272b35;
+            border-top: 1px solid #242833;
+            padding: 32px 24px;
             text-align: center;
-            padding: 30px 20px;
-            color: #7e8490;
+            color: #737a89;
             font-size: 14px;
         }
 
         footer a {
-            color: #b7bcc8;
+            color: #aeb5c5;
             text-decoration: none;
-            margin-left: 12px;
+            margin-left: 14px;
         }
 
-        @media (max-width: 700px) {
+        footer a:hover {
+            color: #ffffff;
+        }
+
+        @media (max-width: 800px) {
+            .nav-links {
+                display: none;
+            }
+
             .hero h1 {
-                font-size: 42px;
+                font-size: 44px;
             }
 
             .hero p {
                 font-size: 18px;
+            }
+
+            .service-grid {
+                grid-template-columns: 1fr;
+            }
+
+            h2 {
+                font-size: 32px;
             }
         }
     </style>
@@ -159,91 +282,197 @@
 
 <body>
 
-<header>
-    <div class="hero">
-        <h1>DARC Creative Games</h1>
+<nav>
+    <div class="nav-container">
+
+        <a class="brand" href="#">
+            DARC
+        </a>
+
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#what-we-do">What We Do</a>
+            <a href="#company">Company</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+    </div>
+</nav>
+
+<header class="hero">
+
+    <div class="hero-content">
+
+        <div class="darc-mark">
+            DARC
+        </div>
+
+        <h1>
+            We create
+            <span>interactive experiences.</span>
+        </h1>
 
         <p>
-            Creating engaging mobile games for players around the world.
+            DARC Creative Games (Private) Limited is a mobile game development
+            company focused on building engaging, polished and accessible
+            interactive entertainment experiences.
         </p>
 
-        <div class="buttons">
-            <a class="button" href="#games">
-                View Our Games
-            </a>
+        <a class="hero-button" href="#about">
+            Learn About DARC
+        </a>
 
-            <a class="button secondary" href="#contact">
-                Contact Us
-            </a>
-        </div>
     </div>
+
 </header>
 
-<section class="about">
-    <h2>About Us</h2>
+<section id="about">
 
-    <p>
-        DARC Creative Games (Private) Limited is a mobile game development
-        studio focused on creating fun, accessible and polished experiences
-        for Android and iOS.
-    </p>
+    <div class="section-container">
+
+        <div class="section-label">
+            About DARC
+        </div>
+
+        <h2>
+            Creativity meets technology.
+        </h2>
+
+        <p class="about-text">
+            At DARC Creative Games, we combine creativity, technology and
+            thoughtful design to develop mobile gaming experiences for players
+            around the world. Our team is focused on creating products that are
+            enjoyable, intuitive and built with attention to quality.
+        </p>
+
+    </div>
+
 </section>
 
-<section id="games">
-    <h2>Our Games</h2>
+<section id="what-we-do" class="services">
 
-    <div class="games">
+    <div class="section-container">
 
-        <div class="game-card">
-            <h3>Game One</h3>
-
-            <p>
-                Add a short description of your game here.
-            </p>
-
-            <a href="#">
-                View on Google Play →
-            </a>
+        <div class="section-label">
+            What We Do
         </div>
 
-        <div class="game-card">
-            <h3>Game Two</h3>
+        <h2>
+            Building games from idea to experience.
+        </h2>
 
-            <p>
-                Add a short description of your second game here.
-            </p>
+        <div class="service-grid">
 
-            <a href="#">
-                View on Google Play →
-            </a>
-        </div>
+            <div class="service-card">
 
-        <div class="game-card">
-            <h3>Game Three</h3>
+                <div class="service-number">
+                    01
+                </div>
 
-            <p>
-                Add another game from your portfolio here.
-            </p>
+                <h3>
+                    Game Development
+                </h3>
 
-            <a href="#">
-                View on App Store →
-            </a>
+                <p>
+                    We design and develop mobile games with a focus on
+                    performance, usability and engaging gameplay.
+                </p>
+
+            </div>
+
+            <div class="service-card">
+
+                <div class="service-number">
+                    02
+                </div>
+
+                <h3>
+                    Game Design
+                </h3>
+
+                <p>
+                    We work on gameplay systems, mechanics, progression and
+                    player experiences designed for mobile platforms.
+                </p>
+
+            </div>
+
+            <div class="service-card">
+
+                <div class="service-number">
+                    03
+                </div>
+
+                <h3>
+                    Mobile Experiences
+                </h3>
+
+                <p>
+                    We create interactive entertainment experiences designed
+                    for modern Android and iOS devices.
+                </p>
+
+            </div>
+
         </div>
 
     </div>
+
+</section>
+
+<section id="company">
+
+    <div class="section-container">
+
+        <div class="section-label">
+            Our Company
+        </div>
+
+        <h2>
+            DARC Creative Games
+        </h2>
+
+        <div class="company-info">
+
+            <p>
+                DARC Creative Games (Private) Limited is a game development
+                company specializing in mobile interactive entertainment.
+            </p>
+
+            <p>
+                We are committed to building creative digital experiences while
+                continuously improving our technology, development processes
+                and understanding of what makes games enjoyable.
+            </p>
+
+        </div>
+
+    </div>
+
 </section>
 
 <section id="contact" class="contact">
 
-    <h2>Contact</h2>
+    <div class="section-container">
 
-    <p>
-        For business inquiries, partnerships or support, get in touch with us.
-    </p>
+        <div class="section-label">
+            Contact
+        </div>
 
-    <a class="button" href="mailto:your@email.com">
-        Contact Us
-    </a>
+        <h2>
+            Get in touch.
+        </h2>
+
+        <p>
+            For business inquiries, careers or general communication,
+            you can contact us by email.
+        </p>
+
+        <a class="email" href="mailto:hrarccreativegames@gmail.com">
+            hrarccreativegames@gmail.com
+        </a>
+
+    </div>
 
 </section>
 
@@ -251,7 +480,7 @@
 
     © 2026 DARC Creative Games (Private) Limited
 
-    <a href="/privacy.html">
+    <a href="privacy.html">
         Privacy Policy
     </a>
 
