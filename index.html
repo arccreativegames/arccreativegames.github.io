@@ -3,20 +3,259 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>DARC Creative Games</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f1117;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        header {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px 20px;
+            background:
+                linear-gradient(
+                    rgba(15, 17, 23, 0.85),
+                    rgba(15, 17, 23, 0.95)
+                );
+        }
+
+        .hero {
+            max-width: 850px;
+        }
+
+        .hero h1 {
+            font-size: 64px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 22px;
+            color: #b7bcc8;
+            margin-bottom: 35px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 14px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            background: #ffffff;
+            color: #111111;
+        }
+
+        .button.secondary {
+            background: transparent;
+            color: white;
+            border: 1px solid #555b66;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            padding: 90px 20px;
+        }
+
+        h2 {
+            font-size: 36px;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .about p {
+            max-width: 750px;
+            margin: auto;
+            text-align: center;
+            color: #b7bcc8;
+            font-size: 18px;
+        }
+
+        .games {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 45px;
+        }
+
+        .game-card {
+            background: #181b22;
+            border: 1px solid #272b35;
+            border-radius: 14px;
+            padding: 30px;
+        }
+
+        .game-card h3 {
+            font-size: 22px;
+            margin-bottom: 12px;
+        }
+
+        .game-card p {
+            color: #aeb4c0;
+            margin-bottom: 20px;
+        }
+
+        .game-card a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contact {
+            text-align: center;
+        }
+
+        .contact p {
+            color: #b7bcc8;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            border-top: 1px solid #272b35;
+            text-align: center;
+            padding: 30px 20px;
+            color: #7e8490;
+            font-size: 14px;
+        }
+
+        footer a {
+            color: #b7bcc8;
+            text-decoration: none;
+            margin-left: 12px;
+        }
+
+        @media (max-width: 700px) {
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <h1>DARC Creative Games</h1>
+<header>
+    <div class="hero">
+        <h1>DARC Creative Games</h1>
+
+        <p>
+            Creating engaging mobile games for players around the world.
+        </p>
+
+        <div class="buttons">
+            <a class="button" href="#games">
+                View Our Games
+            </a>
+
+            <a class="button secondary" href="#contact">
+                Contact Us
+            </a>
+        </div>
+    </div>
+</header>
+
+<section class="about">
+    <h2>About Us</h2>
 
     <p>
-        DARC Creative Games (Private) Limited is a mobile game development company.
+        DARC Creative Games (Private) Limited is a mobile game development
+        studio focused on creating fun, accessible and polished experiences
+        for Android and iOS.
     </p>
+</section>
+
+<section id="games">
+    <h2>Our Games</h2>
+
+    <div class="games">
+
+        <div class="game-card">
+            <h3>Game One</h3>
+
+            <p>
+                Add a short description of your game here.
+            </p>
+
+            <a href="#">
+                View on Google Play →
+            </a>
+        </div>
+
+        <div class="game-card">
+            <h3>Game Two</h3>
+
+            <p>
+                Add a short description of your second game here.
+            </p>
+
+            <a href="#">
+                View on Google Play →
+            </a>
+        </div>
+
+        <div class="game-card">
+            <h3>Game Three</h3>
+
+            <p>
+                Add another game from your portfolio here.
+            </p>
+
+            <a href="#">
+                View on App Store →
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<section id="contact" class="contact">
+
+    <h2>Contact</h2>
 
     <p>
-        We develop mobile games for Android and iOS.
+        For business inquiries, partnerships or support, get in touch with us.
     </p>
+
+    <a class="button" href="mailto:your@email.com">
+        Contact Us
+    </a>
+
+</section>
+
+<footer>
+
+    © 2026 DARC Creative Games (Private) Limited
+
+    <a href="/privacy.html">
+        Privacy Policy
+    </a>
+
+</footer>
 
 </body>
 </html>
