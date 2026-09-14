@@ -5597,3 +5597,7 @@ gitberry.com, 816100181, RESELLER
 lijit.com, 524160, RESELLER, fafdf38b16bf6b2b
 pubeasy.io, 110779, RESELLER
 tubia.com, 40122, RESELLER
+
+# DARC Creative Games - Custom Entries
+# DARC Creative Games - AdMob
+google.com, pub-9876543210123456, DIRECT, f08c47fec0942fa0
